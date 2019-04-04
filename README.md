@@ -10,7 +10,7 @@ var R_htmlToWxml = require('../../util/htmlToWxml.js');//引入公共方法
 2.将html内容转成json数据
 R_htmlToWxml.html2json("html内容");
 转换后的json格式类型大概如下：
-
+![效果图](http://kevenfeng.com/wordpress/wp-content/uploads/2016/11/f063d9e8-f3f6-4312-81df-def678d45a54.png)
 3.吐到页面中显示
 <block wx:for="{{content}}"  wx:for-index="idy"  wx:for-item="cellData">
         <block  wx:if="{{cellData.type == 'view'}}">
@@ -36,6 +36,9 @@ R_htmlToWxml.html2json("html内容");
 通常我们抓取的内容是html页面，特别是像资讯这一类的，如果在小程序里面显示文章内容，此插件提供了一种解决方案，希望对大家有用。
 
 在客户端中用native显示html页面体验上面没有native的好，htmlToWxml插件给客户端中用native的方式显示html内容提供了一种解决方案
+
+demo效果：
+![效果图](http://kevenfeng.com/wordpress/wp-content/uploads/2016/11/75f3150c-9e0a-40a8-80bd-473da90e2152.png)
 
 
 
