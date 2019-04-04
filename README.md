@@ -13,7 +13,8 @@ R_htmlToWxml.html2json("html内容");
 转换后的json格式类型大概如下：
 ![效果图](http://kevenfeng.com/wordpress/wp-content/uploads/2016/11/f063d9e8-f3f6-4312-81df-def678d45a54.png)
 ## 3.吐到页面中显示
-<p><block wx:for="{{content}}"  wx:for-index="idy"  wx:for-item="cellData">
+```
+<block wx:for="{{content}}"  wx:for-index="idy"  wx:for-item="cellData">
         <block  wx:if="{{cellData.type == 'view'}}">
             <view class="p">
                 <block  wx:for="{{cellData.child}}" wx:key="text">
@@ -30,7 +31,7 @@ R_htmlToWxml.html2json("html内容");
             <image class="img" data-index="{{idy}}" style="height: {{cellData.attr.height?cellData.attr.height:0}}px"  mode="aspectFit" src="{{cellData.attr.src}}" bindload="imageLoad"></image>
         </block>
     </block>
-</p>    
+``` 
 通过判断不同节点类型，显示不同的小程序结构
 
 由于小程序图片的高度没法自适应，需要给图片设置高度，所以需要在图片加载完以后，获取图片高度，等比算出显示图片高度，赋值给对应图片
